@@ -2,6 +2,7 @@ import { LanguageToggle } from "@/components/LanguageToggle";
 import { Hero } from "@/components/Hero";
 import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
+import { Career } from "@/components/Career";
 import { Contact } from "@/components/Contact";
 
 const Index = () => {
@@ -12,6 +13,7 @@ const Index = () => {
         <ul className="flex space-x-4">
           <li><a href="#skills" className="nav-link">Skills</a></li>
           <li><a href="#projects" className="nav-link">Projects</a></li>
+          <li><a href="#career" className="nav-link">Career</a></li>
           <li><a href="#contact" className="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -19,6 +21,7 @@ const Index = () => {
         <Hero />
         <Skills />
         <Projects />
+        <Career />
         <Contact />
       </div>
     </div>
