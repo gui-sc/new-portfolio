@@ -1,23 +1,46 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useLanguage } from "../hooks/useLanguage";
 
 export const Hero = () => {
+  const { language } = useLanguage();
   const [displayText, setDisplayText] = useState("");
-  const fullName = "John Doe";
-  
+  const [displayOccupation, setDisplayOccupation] = useState("");
+  const fullName = language == 'en' ? "Hi, I'm Guilherme Silveira" : "Olá, eu sou Guilherme Silveira";
+  const occupation = language =='en' ?'Full Stack Developer' : "Desenvolvedor Full Stack";
+
   useEffect(() => {
+    setDisplayText("");
+    setDisplayOccupation("");
     let currentIndex = 0;
     const interval = setInterval(() => {
       if (currentIndex <= fullName.length) {
         setDisplayText(fullName.slice(0, currentIndex));
         currentIndex++;
       } else {
-        clearInterval(interval);
+        setTimeout(() => {
+          clearInterval(interval);
+          handleDisplayOccupation();
+        }, 300); // Adjust delay before displaying occupation here
       }
-    }, 150); // Adjust speed of typing here
+    }, 100); // Adjust speed of typing here
 
     return () => clearInterval(interval);
-  }, []);
+  }, [language]);
+
+  const handleDisplayOccupation = () => {
+    let currentIndex = 0;
+    const interval = setInterval(() => {
+      if (currentIndex <= occupation.length) {
+        setDisplayOccupation(occupation.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 100); // Adjust speed of typing here
+
+    return () => clearInterval(interval);
+  }
 
   return (
     <section className="min-h-screen flex items-center justify-center">
@@ -43,18 +66,15 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-xl md:text-2xl text-gray-400"
         >
-          Full Stack Developer
+          {displayOccupation}
+          <motion.span
+            animate={{ opacity: [1, 0] }}
+            transition={{ duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
+            className="absolute ml-1 -mr-1"
+          >
+            |
+          </motion.span>
         </motion.p>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="glass-card p-6 max-w-md mx-auto"
-        >
-          <p className="text-gray-300">
-            Passionate about creating beautiful and functional web applications
-          </p>
-        </motion.div>
       </div>
     </section>
   );

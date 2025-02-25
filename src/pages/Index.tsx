@@ -10,8 +10,10 @@ import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "../hooks/useLanguage";
 
 const Index = () => {
+  const { language } = useLanguage();
   const isMobile = useIsMobile();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   
@@ -84,7 +86,7 @@ const Index = () => {
                         className="block text-xl text-gray-300 hover:text-white transition-colors"
                         onClick={(e) => scrollToSection(e, "skills")}
                       >
-                        Skills
+                        {language === 'en' ? 'Skills' : 'Habilidades'}
                       </a>
                     </motion.li>
                     <motion.li 
@@ -97,7 +99,7 @@ const Index = () => {
                         className="block text-xl text-gray-300 hover:text-white transition-colors"
                         onClick={(e) => scrollToSection(e, "projects")}
                       >
-                        Projects
+                        {language === 'en' ? 'Projects' : 'Projetos'}
                       </a>
                     </motion.li>
                     <motion.li 
@@ -110,7 +112,7 @@ const Index = () => {
                         className="block text-xl text-gray-300 hover:text-white transition-colors"
                         onClick={(e) => scrollToSection(e, "career")}
                       >
-                        Career
+                        {language === 'en' ? 'Career' : 'Carreira'}
                       </a>
                     </motion.li>
                     <motion.li 
@@ -123,7 +125,7 @@ const Index = () => {
                         className="block text-xl text-gray-300 hover:text-white transition-colors"
                         onClick={(e) => scrollToSection(e, "contact")}
                       >
-                        Contact
+                        {language === 'en' ? 'Contact' : 'Contato'}
                       </a>
                     </motion.li>
                   </ul>
@@ -141,7 +143,7 @@ const Index = () => {
                 className="nav-link"
                 onClick={(e) => scrollToSection(e, "skills")}
               >
-                Skills
+                {language === 'en' ? 'Skills' : 'Habilidades'}
               </a>
             </li>
             <li>
@@ -150,7 +152,7 @@ const Index = () => {
                 className="nav-link"
                 onClick={(e) => scrollToSection(e, "projects")}
               >
-                Projects
+                {language === 'en' ? 'Projects' : 'Projetos'}
               </a>
             </li>
             <li>
@@ -159,7 +161,7 @@ const Index = () => {
                 className="nav-link"
                 onClick={(e) => scrollToSection(e, "career")}
               >
-                Career
+                {language === 'en' ? 'Career' : 'Carreira'}
               </a>
             </li>
             <li>
@@ -168,7 +170,7 @@ const Index = () => {
                 className="nav-link"
                 onClick={(e) => scrollToSection(e, "contact")}
               >
-                Contact
+                {language === 'en' ? 'Contact' : 'Contato'}
               </a>
             </li>
           </ul>

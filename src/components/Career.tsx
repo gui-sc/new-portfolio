@@ -3,8 +3,12 @@ import { useLanguage } from "@/hooks/useLanguage";
 
 interface CareerItem {
   company: string;
-  period: string;
-  role: string;
+  start: string;
+  end?: string;
+  role: {
+    en: string;
+    pt: string;
+  };
   description: {
     en: string;
     pt: string;
@@ -13,32 +17,30 @@ interface CareerItem {
 
 const careerData: CareerItem[] = [
   {
-    company: "Tech Corp",
-    period: "2021 - Present",
-    role: "Senior Software Engineer",
+    company: "Regulatório Mais",
+    start: "2023",
+    role: {
+      en: "Full Stack Developer",
+      pt: "Desenvolvedor Full Stack"
+    },
     description: {
-      en: "Led development of multiple high-impact projects, mentored junior developers, and implemented best practices that improved team productivity by 30%.",
-      pt: "Liderou o desenvolvimento de vários projetos de alto impacto, mentorou desenvolvedores juniores e implementou melhores práticas que melhoraram a produtividade da equipe em 30%."
+      en: "I work as a software developer and Tech Lead at Regulatório Mais, where I work with technologies such as React, Typescript, Express, using AWS Cloud for deployment. The project consists of a regulatory obligations management system for financial institutions, including features such as deadline control, notifications, and report generation.",
+      pt: "Sou desenvolvedor de software e Tech Lead na Regulatório Mais, onde trabalho com tecnologias como React, Typescript, Express, utilizando AWS Cloud para deploy. O projeto consiste em um sistema de gestão de obrigações regulatórias para instituições financeiras, incluindo funcionalidades como controle de prazos, notificações e geração de relatórios."
     }
   },
   {
-    company: "Innovation Labs",
-    period: "2019 - 2021",
-    role: "Full Stack Developer",
+    company: "Convem Store",
+    start: "2022",
+    end: "2023",
+    role: {
+      en: "Full Stack Developer",
+      pt: "Desenvolvedor Full Stack"
+    },
     description: {
-      en: "Developed and maintained multiple web applications using React and Node.js, improving application performance by 40%.",
-      pt: "Desenvolveu e manteve múltiplas aplicações web usando React e Node.js, melhorando o desempenho das aplicações em 40%."
+      en: "I was hired by Convem Store, a software house focused on solutions for fintechs, where I worked on several projects, using technologies such as React, Typescript, Node.js, Express, and databases PostgreSQL and AWS DynamoDB.",
+      pt: "Fui contratado pela Convem Store, uma software house voltada para soluções para fintechs, onde trabalhei em diversos projetos, usando tecnologias como React, Typescript, Node.js, Express, e banco de dados PostgreSQL e AWS DynamoDB."
     }
   },
-  {
-    company: "Digital Solutions",
-    period: "2018 - 2019",
-    role: "Frontend Developer",
-    description: {
-      en: "Created responsive web interfaces and implemented new features for client applications using React and TypeScript.",
-      pt: "Criou interfaces web responsivas e implementou novos recursos para aplicações de clientes usando React e TypeScript."
-    }
-  }
 ];
 
 export const Career = () => {
@@ -47,7 +49,7 @@ export const Career = () => {
   return (
     <section id="career" className="py-20">
       <h2 className="section-title">
-        {language === 'en' ? 'Career Timeline' : 'Linha do Tempo Profissional'}
+        {language === 'en' ? 'Career Timeline' : 'Carreira Profissional'}
       </h2>
       <div className="space-y-8">
         {careerData.map((item, index) => (
@@ -61,9 +63,9 @@ export const Career = () => {
               <div className="p-6">
                 <div className="mb-2 flex items-center justify-between">
                   <h3 className="text-xl font-bold text-white">{item.company}</h3>
-                  <span className="text-sm text-gray-400">{item.period}</span>
+                  <span className="text-sm text-gray-400">{item.start} - {item.end ? item.end : language == 'en' ? 'Present' : 'Presente'}</span>
                 </div>
-                <p className="mb-2 text-accent">{item.role}</p>
+                <p className="mb-2 text-accent">{language == 'en' ? item.role.en : item.role.pt}</p>
                 <p className="text-gray-300">
                   {language === 'en' ? item.description.en : item.description.pt}
                 </p>
