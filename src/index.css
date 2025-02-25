@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -27,10 +28,31 @@
   }
   
   .nav-link {
-    @apply relative px-4 py-2 text-sm text-gray-300 transition-colors hover:text-white after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full;
+    @apply relative px-2 py-1 text-sm text-gray-300 transition-colors hover:text-white after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full;
   }
 
   .section-title {
     @apply text-3xl font-bold mb-8 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent;
+  }
+  
+  /* Fix section spacing */
+  section {
+    @apply py-16 md:py-20;
+  }
+  
+  /* Animation classes */
+  .animate-fade-up {
+    animation: fade-up 0.5s ease forwards;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
