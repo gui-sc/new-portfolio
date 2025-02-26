@@ -65,9 +65,9 @@ export const Career = () => {
                   <h3 className="text-xl font-bold text-white">{item.company}</h3>
                   <span className="text-sm text-gray-400">{item.start} - {item.end ? item.end : language == 'en' ? 'Present' : 'Presente'}</span>
                 </div>
-                <p className="mb-2 text-accent">{language == 'en' ? item.role.en : item.role.pt}</p>
+                <p className="mb-2 text-accent">{item.role[language]}</p>
                 <p className="text-gray-300">
-                  {language === 'en' ? item.description.en : item.description.pt}
+                  {item.description[language]}
                 </p>
               </div>
             </Card>

@@ -7,14 +7,12 @@ const skills = {
     "AWS", "Docker", "PostgreSQL", "MySQL", "DynamoDB",
     "Git", "Redis", "NextJS",
   ],
-  softEn: [
-    "Leadership", "Communication", "Problem Solving",
-    "Team Work", "Adaptability", "Time Management", "Proactivity"
-  ],
-  softPt: [
-    "Liderança", "Comunicação", "Resolução de Problemas",
-    "Trabalho em Equipe", "Adaptabilidade", "Gestão do Tempo", "Proatividade"
-  ]
+  soft: {
+    en : ["Leadership", "Communication", "Problem Solving",
+    "Team Work", "Adaptability", "Time Management", "Proactivity"],
+    pt: [ "Liderança", "Comunicação", "Resolução de Problemas",
+      "Trabalho em Equipe", "Adaptabilidade", "Gestão do Tempo", "Proatividade"]
+  },
 };
 
 export const Skills = () => {
@@ -47,17 +45,7 @@ export const Skills = () => {
             {language == 'en' ? "Soft Skills" : "Habilidades Comportamentais"}
           </h3>
           <div className="grid grid-cols-2 gap-4">
-            {language == 'en' ? skills.softEn.map((skill, index) => (
-              <motion.div
-                key={skill}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="glass-card p-4 text-center hover:bg-white/10 transition-colors"
-              >
-                {skill}
-              </motion.div>
-            )) : skills.softPt.map((skill, index) => (
+            {skills.soft[language].map((skill, index) => (
               <motion.div
                 key={skill}
                 initial={{ opacity: 0, y: 20 }}
