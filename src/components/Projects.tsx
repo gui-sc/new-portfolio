@@ -5,6 +5,19 @@ import { useLanguage } from "../hooks/useLanguage";
 const GITHUB_URL = "https://github.com/gui-sc"
 const projects = [
   {
+    name: "New Portfolio",
+    description: {
+        pt: `Este é o meu novo portfólio. Ele foi desenvolvido pensando em ter um aspecto mais profissional
+        e que demonstrasse mais as minhas habilidades. Ele foi feito com Vite, TailwindCSS e TypeScript.
+    `,
+        en: `This is my new portfolio. It was developed thinking about having a more professional look
+        and that demonstrated more my skills. It was made with Vite, TailwindCSS and TypeScript.`
+    },
+    preview: "https://guilhermesilveira.dev/",
+    repository: `${GITHUB_URL}/new-portfolio`,
+    languages: ["TypeScript", "Vite", "TailwindCSS"]
+},
+  {
       name: "Portfolio",
       description: {
           pt: `Este é o meu portfólio, onde eu mostro os meus projetos e habilidades. Foi meu primeiro projeto 
@@ -14,7 +27,7 @@ const projects = [
       `,
           en: `This is my portfolio, where I showcase my projects and skills. It was my first project published on an internet domain. This project brought me new knowledge about Next.js and Front-End development, something I have always found challenging throughout my career. I intend to keep it updated and improve it whenever possible.`
       },
-      preview: "https://guilhermesilveira.dev",
+      preview: "https://portfolio-indol-one-99.vercel.app/",
       repository: `${GITHUB_URL}/portfolio`,
       languages: ["TypeScript", "NextJs", "TailwindCSS"]
   },
