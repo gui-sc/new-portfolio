@@ -79,19 +79,6 @@ const Index = () => {
                     <motion.li 
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.1 }}
-                    >
-                      <a 
-                        href="#skills" 
-                        className="block text-xl text-gray-300 hover:text-white transition-colors"
-                        onClick={(e) => scrollToSection(e, "skills")}
-                      >
-                        {language === 'en' ? 'Skills' : 'Habilidades'}
-                      </a>
-                    </motion.li>
-                    <motion.li 
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.2 }}
                     >
                       <a 
@@ -139,15 +126,6 @@ const Index = () => {
           <ul className="flex space-x-6">
             <li>
               <a 
-                href="#skills" 
-                className="nav-link"
-                onClick={(e) => scrollToSection(e, "skills")}
-              >
-                {language === 'en' ? 'Skills' : 'Habilidades'}
-              </a>
-            </li>
-            <li>
-              <a 
                 href="#projects" 
                 className="nav-link"
                 onClick={(e) => scrollToSection(e, "projects")}
@@ -179,9 +157,9 @@ const Index = () => {
       
       <div className="container mx-auto px-4">
         <Hero />
-        <Skills />
         <Projects />
         <Career />
+        <Skills />
         <Contact />
       </div>
     </div>

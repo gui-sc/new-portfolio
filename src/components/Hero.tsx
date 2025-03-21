@@ -6,7 +6,7 @@ export const Hero = () => {
   const { language } = useLanguage();
   const [displayText, setDisplayText] = useState("");
   const [displayOccupation, setDisplayOccupation] = useState("");
-  const fullName = language == 'en' ? "Hi, I'm Guilherme Silveira" : "Olá, eu sou Guilherme Silveira";
+  const fullName = language == 'en' ? "Hello, everybody calls me Guilherme" : "Olá, meu nome é Guilherme";
   const occupation = language =='en' ?'Full Stack Developer' : "Desenvolvedor Full Stack";
 
   useEffect(() => {

@@ -1,140 +1,145 @@
 import { motion } from "framer-motion";
-import { Github, Link } from "lucide-react";
+import { Link } from "lucide-react";
 import { useLanguage } from "../hooks/useLanguage";
 
-const GITHUB_URL = "https://github.com/gui-sc"
 const projects = [
+  {
+    name: 'Edenise Silveira',
+    description: {
+      pt: 'Este é um projeto feito para uma cliente advogada, possui um design simples e objetivo, com seção de apresentação, áreas de atuação, e blog com posts de ajuda ao direito previdenciário.',
+      en: 'This is a project made for a lawyer client, it has a simple and objective design, with a presentation section, areas of practice, and a blog with posts to help with social security law.'
+    },
+    preview: 'https://edenisesilveira.adv.br/'
+  },
+  {
+    name: 'Dieize Oliveira',
+    description: {
+      pt: 'Este é um projeto para uma cliente psicóloga, possui um design aconchegante e confortável, com aspécto de acolhimento e cuidado, com seção de apresentação, área de terapia e blog com posts de ajuda psicológica.',
+      en: 'This is a project for a psychologist client, it has a cozy and comfortable design, with an aspect of welcoming and care, with a presentation section, therapy area and blog with posts of psychological help.'
+    },
+    preview: 'https://psicologa-dieize.com.br'
+  },
+  {
+    name: 'HB Films',
+    description: {
+      pt: 'Este site é um site voltado para os projetos e trabalhos de um videomaker, tendo um design moderno, com animações e efeitos de rolagem, traz uma experiência agradável e interativa.',
+      en: 'This site is a site focused on the projects and works of a videomaker, having a modern design, with animations and scrolling effects, it brings a pleasant and interactive experience.'
+    },
+    preview: 'https://hbfilms.com.br/'
+  },
+  {
+    name: 'Colder Company',
+    description: {
+      pt: 'Este é um site E-Commerce para uma loja de camisetas streetwear, com um design moderno, esse projeto traz uma experiência de compra agradável e intuitiva, com seção de produtos, carrinho de compras e checkout.',
+      en: 'This is an E-Commerce website for a streetwear t-shirt store, with a modern design, this project brings a pleasant and intuitive shopping experience, with a product section, shopping cart and checkout.'
+    },
+    preview: 'https://colder-company.vercel.app/'
+  },
+  {
+    name: 'Hapri Studio',
+    description: {
+      pt: 'Este site é um site voltado para os trabalhos e resultados de um estúdio de design, com um design moderno e minimalista, traz uma experiência agradável e intuitiva.',
+      en: 'This site is a site focused on the works and results of a design studio, with a modern and minimalist design, it brings a pleasant and intuitive experience.'
+    },
+    preview: 'https://hapri-studio.vercel.app/'
+  },
+  {
+    name: 'Mentoria Irmãos Margutti',
+    description: {
+      pt: 'Este foi um projeto de uma landing page para uma mentoria de odontologia, com um design moderno e objetivo, com seção de apresentação, depoimentos, apresentação dos tutores, preços e promoções.',
+      en: 'This was a project of a landing page for a dentistry mentoring, with a modern and objective design, with a presentation section, testimonials, presentation of the tutors, prices and promotions.'
+    },
+    preview: 'https://mentoria-irmaos-margutti.vercel.app/'
+  },
   {
     name: "New Portfolio",
     description: {
-        pt: `Este é o meu novo portfólio. Ele foi desenvolvido pensando em ter um aspecto mais profissional
-        e que demonstrasse mais as minhas habilidades. Ele foi feito com Vite, TailwindCSS e TypeScript.
+        pt: `Este é o meu novo portfólio, onde eu mostro os meus projetos e habilidades. Foi meu primeiro projeto 
+      que foi publicado em um domínio na internet. Ele foi desenvolvido pensando em ter um aspecto mais profissional
+        e que demonstrasse mais as minhas habilidades. Pretendo manter ele sempre atualizado e melhorar ele sempre
+      que possível.
     `,
-        en: `This is my new portfolio. It was developed thinking about having a more professional look
-        and that demonstrated more my skills. It was made with Vite, TailwindCSS and TypeScript.`
+        en: `This is my new portfolio, where I showcase my projects and skills. It was developed thinking about having a more professional look
+        and that demonstrated more my skills. I intend to keep it updated and improve it whenever possible.`
     },
     preview: "https://guilhermesilveira.dev/",
-    repository: `${GITHUB_URL}/new-portfolio`,
-    languages: ["TypeScript", "Vite", "TailwindCSS"]
 },
   {
       name: "Portfolio",
       description: {
-          pt: `Este é o meu portfólio, onde eu mostro os meus projetos e habilidades. Foi meu primeiro projeto 
-      que foi publicado em um domínio na internet. Este projeto me trouxe novos conhecimentos sobre NextJs e Front-End, 
-      algo que sempre tive dificuldade ao longo da carreira. Pretendo manter ele sempre atualizado e melhorar ele sempre
-      que possível.
+          pt: `Este é o meu antigo portfólio.
       `,
-          en: `This is my portfolio, where I showcase my projects and skills. It was my first project published on an internet domain. This project brought me new knowledge about Next.js and Front-End development, something I have always found challenging throughout my career. I intend to keep it updated and improve it whenever possible.`
+          en: `This is my old portfolio.`
       },
       preview: "https://portfolio-indol-one-99.vercel.app/",
-      repository: `${GITHUB_URL}/portfolio`,
-      languages: ["TypeScript", "NextJs", "TailwindCSS"]
-  },
-  {
-      name: "Salon App API (WIP)",
-      description: {
-          pt: `Este é um projeto em andamento, onde estou desenvolvendo um web app para salões de beleza e barbearias. 
-          O objetivo desse projeto é ser um projeto white label, em que qualquer cliente possa customizar o app de acordo
-          com a sua logo, cores e serviços. O projeto tem uma stack completa, com um back-end em NodeJs, um front-end em React
-          e banco de dados em MongoDB. Atualmente finalizei a parte de funções básicas do back-end, para inserção, atualização, 
-          leitura e remoção dos dados, irei agora seguir com a implementação de autenticação e autorização.`,
-          en: `This is a work in progress project, where I'm developing a web app for beauty salons and barbershops.
-          This project's goal is to be a white label app, where any client can customize the app with their logo, colors palette
-          and services. The project has a full stack, with a NodeJs back-end, a React front-end and a MongoDB database.
-          I've finished the basic functions of the back-end, for CRUD operations, and now I'll move on to the implementation
-          of authentication and authorization.`
-      },
-      repository: `${GITHUB_URL}/salonApp-api`,
-      languages: ["TypeScript", "Express", "NodeJs", "MongoDB"]
   },
   {
       name: "Rosacleo",
       description: {
-          en: `This is a Mocked E-commerce Web App, built with Next.js, Typescript and Tailwind CSS. This Web App was made for a friend's high school project. The main goal of this project was to create a simple and responsive e-commerce website, with a focus on the user experience. The website has a product page, a cart page, and a checkout page, as well as a discount coupon.`,
-          pt: `Este é um Web App de E-commerce fictício, construído com Next.js, Typescript e Tailwind CSS. Este Web App foi feito para um projeto de ensino médio de um amigo. O principal objetivo deste projeto era criar um site de e-commerce simples e responsivo, com foco na experiência do usuário. O site possui uma página de produto, uma página de carrinho e uma página de checkout, além de cupom de desconto.`
+          en: `This is a Mocked E-commerce Web App. This Web App was made for a friend's high school project. The main goal of this project was to create a simple and responsive e-commerce website, with a focus on the user experience. The website has a product page, a cart page, and a checkout page, as well as a discount coupon.`,
+          pt: `Este é um Web App de E-commerce fictício. Este Web App foi feito para um projeto de ensino médio de um amigo. O principal objetivo deste projeto era criar um site de e-commerce simples e responsivo, com foco na experiência do usuário. O site possui uma página de produto, uma página de carrinho e uma página de checkout, além de cupom de desconto.`
       },
-      repository: `${GITHUB_URL}/rosacleo`,
       preview: "https://rosacleo.vercel.app",
-      languages: ["TypeScript", "NextJs", "TailwindCSS"]
-  },
-  {
-      name: "Fleet Manager API",
-      description: {
-          en: `This is an api for managing fleets and travel applications, built with Express, Multer, Typescript and Google Cloud Storage. 
-          This project is part of three projects that are part of the same system, the other two are the App and the Web App.
-          This project was made for a college project in group, where the main goal was to create a system for managing fleets and travel applications,
-          with a focus on development's best practices.`,
-          pt: `Esta é uma api para gerenciamento de frotas e viagens, construída com Express, Multer, Typescript e Google Cloud Storage.
-          Este projeto faz parte de três projetos que fazem parte do mesmo sistema, os outros dois são o App e o Web App.
-          Este projeto foi feito para um projeto da faculdade em grupo, onde o principal objetivo era criar um sistema para gerenciamento de frotas e viagens,
-          com foco nas melhores práticas de desenvolvimento.`
-      },
-      repository: `${GITHUB_URL}/api-gestao-frota`,
-      languages: ["TypeScript", "Express", "Multer", "Google Cloud"]
-  },
-  {
-      name: "Fleet Manager App",
-      description: {
-          en: `This is an app for managing fleets and travel applications, built with React Native. 
-          This project is part of three projects that are part of the same system, the other two are the API and the Web App.
-          This project was made for a college project in group, where the main goal was to create a system for managing fleets and travel applications,
-          with a focus on development's best practices.`,
-          pt: `Este é um app para gerenciamento de frotas e viagens, construído com React Native.
-          Este projeto faz parte de três projetos que fazem parte do mesmo sistema, os outros dois são a API e o Web App.
-          Este projeto foi feito para um projeto da faculdade em grupo, onde o principal objetivo era criar um sistema para gerenciamento de frotas e viagens,
-          com foco nas melhores práticas de desenvolvimento.`
-      },
-      repository: `${GITHUB_URL}/gestao-de-frota-app`,
-      languages: ["TypeScript", "React Native", "Google Maps API"]
   },
   {
       name: 'Page Flow',
       description: {
           en: `This project is a Pomodoro timer with a kindle-like design. The main goal is to help people to 
-          focus on their books and studies. The project was made with HTML, CSS and JavaScript. This project 
+          focus on their books and studies. This project 
           was made for a friend's college project from the course of Advertising and Marketing.`,
           pt: `Este projeto é um timer Pomodoro com um design semelhante ao kindle. O principal objetivo 
-          é ajudar as pessoas a se concentrarem em seus livros e estudos. O projeto foi feito com HTML, 
-          CSS e JavaScript. Este projeto foi feito para um projeto da faculdade de um amigo do curso de 
+          é ajudar as pessoas a se concentrarem em seus livros e estudos. Este projeto foi feito para um projeto da faculdade de um amigo do curso de 
           Publicidade e Marketing.`
       },
-      repository: `${GITHUB_URL}/page-flow`,
-      preview: 'https://page-flow-pi.vercel.app/',
-      languages: ["JavaScript", "HTML", "CSS"]
+      preview: 'https://page-flow-smoky.vercel.app/',
   },
   {
-      name: "API Troco",
-      description: {
-          pt: `Este projeto foi feito durante uma aula, com o intuito de testar os conhecimentos em NodeJs, Express e também com funções recursivas. Ele utiliza
-          da prática de função recursiva para calcular com mais eficiência a quantidade de notas e moedas necessárias para o troco. Recebe dois valores: o valor total da conta
-          e o valor que foi pago ao caixa, e retorna um objeto indicando quais notas e moedas devem ser devolvidas ao cliente. Os valores retornados são em reais. Por fim, foi implementado um Swagger para documentar a API.`,
-          en: `This project was made during a class, with the purpose of testing the knowledge in NodeJs, Express and also with recursive functions. It uses recursive function to calculate
-           more efficiently the amount of notes and coins needed for the change. It receives two values: the total bill amount and the 
-           amount paid to the cashier, and returns an object indicating which notes and coins should be returned to the customer. The values returned are in BRL. Finally, a Swagger was implemented to document the API.`
-      },
-      repository: `${GITHUB_URL}/api-troco`,
-      languages: ["JavaScript", "NodeJs", "Express", "Swagger"]
+    name: 'Advogado',
+    description: {
+      pt: 'Este é um site de exemplo para possíveis advogados, com um design moderno e objetivo, traz uma experiência agradável e intuitiva, com seção de apresentação, áreas de atuação, blog e contato.',
+      en: 'This is an example site for possible lawyers, with a modern and objective design, it brings a pleasant and intuitive experience, with a presentation section, areas of practice, blog and contact.'
+    },
+    preview: 'https://exemplo-advogado.vercel.app/'
   },
   {
-      name: "Vai Aonde",
-      description: {
-          pt: `Este é um aplicativo para controle de gastos de uma viagem. O usuário pode adicionar os gastos com gasolina,
-aliemntação, hospedagem e outros. O aplicativo calcula o total gasto. Este aplicativo foi feito para um trabalho na faculdade e desenvolvido em grupo com mais duas pessoas.`,
-          en: `This is an app for managing travel expenses. The user can add expenses such as gas, food, accommodation, and others. The app calculates the total amount spent. This app was created for a college project and developed in a group with two other people.`
-      },
-      repository: `${GITHUB_URL}/AppVaiAonde`,
-      languages: ["Java", "Android Studio"]
+    name: 'Hotel',
+    description: {
+      pt: 'Este é um site de exemplo para possíveis hotéis, com um design moderno e objetivo, traz uma experiência agradável e intuitiva, com seção de apresentação, atrações próximas, quartos, serviços e contato.',
+      en: 'This is an example site for possible hotels, with a modern and objective design, it brings a pleasant and intuitive experience, with a presentation section, nearby attractions, rooms, services and contact.'
+    },
+    preview: 'https://hotel-site-experience.vercel.app/'
   },
   {
-      name: "Asterisca Isso",
-      description: {
-          pt: `Este é um projeto de aplicativo Android que tem como objetivo "traduzir" as frases para que sejam apenas asteriscos. O aplicativo foi desenvolvido em Java com o Android Studio. Esse aplicativo foi desenvolvido em 2021 quando na época, no 
-Twitter/X, havia uma brincadeira de "traduzir" as frases para que fossem apenas asteriscos. O aplicativo foi desenvolvido para facilitar a brincadeira.`,
-          en: `This is an Android app project that aims to "translate" phrases so that they are only asterisks. The application was developed in Java with Android Studio. This application was developed in 2021 when at the time, on Twitter/X, there was a joke of "translating" the phrases so that they were only asterisks. The application was developed to facilitate the joke.`
-      },
-      repository: `${GITHUB_URL}/asteriscaIsso`,
-      languages: ["Java", "Android Studio"]
+    name: 'Social Media',
+    description: {
+      pt: 'Este é um site de exemplo para possíveis social medias, com um design moderno e objetivo, traz uma experiência agradável e intuitiva, com seção de apresentação, serviços, blog e contato.',
+      en: 'This is an example site for possible social medias, with a modern and objective design, it brings a pleasant and intuitive experience, with a presentation section, services, blog and contact.'
+    },
+    preview: 'https://exemplo-social-media.vercel.app/'
+  },
+  {
+    name: 'Nutri',
+    description: {
+      pt: 'Este é um site de exemplo para possiveis nutricionistas, com um design moderno e objetivo, traz uma experiência agradável e intuitiva, com seção de apresentação, serviços, blog e contato.',
+      en: 'This is an example site for possible nutritionists, with a modern and objective design, it brings a pleasant and intuitive experience, with a presentation section, services, blog and contact.'
+    },
+    preview: 'https://exemplo-nutricionista.vercel.app/'
+  },
+  {
+    name: 'Foto Studio',
+    description: {
+      pt: 'Este é um site de exemplo para possíveis fotógrafos, com um design moderno e objetivo, traz uma experiência agradável e intuitiva, com seção de apresentação, portfólio, blog e contato.',
+      en: 'This is an example site for possible photographers, with a modern and objective design, it brings a pleasant and intuitive experience, with a presentation section, portfolio, blog and contact.'
+    },
+    preview: 'https://exemplo-fotografo.vercel.app/'
+  },
+  {
+    name: 'Psicólogo',
+    description: {
+      pt: 'Este é um site de exemplo para possíveis psicólogos, com um design moderno e objetivo, traz uma experiência agradável e intuitiva, com seção de apresentação, serviços, blog e contato.',
+      en: 'This is an example site for possible psychologists, with a modern and objective design, it brings a pleasant and intuitive experience, with a presentation section, services, blog and contact.'
+    },
+    preview: 'https://exemplo-psicologa.vercel.app/'
   }
 ]
 
@@ -143,33 +148,24 @@ export const Projects = () => {
 
   return (
     <section id="projects" className="py-20">
-      <h2 className="section-title">Projects</h2>
+      <h2 className="section-title">{language == "en" ? "Projects" : "Projetos"}</h2>
       <div className="grid md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
           <motion.div
             key={project.name}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             className="glass-card p-6 space-y-4 hover:bg-white/10 transition-all duration-300"
           >
             <h3 className="text-xl font-semibold">{project.name}</h3>
             <p className="text-gray-400">{project.description[language]}</p>
-            <div className="flex flex-wrap gap-2">
-              {project.languages.map((tech) => (
-                <span key={tech} className="text-sm text-accent bg-accent/10 px-2 py-1 rounded">
-                  {tech}
-                </span>
-              ))}
-            </div>
-            {(project.repository || project.preview) && <div className="flex gap-4">
-              {project.repository && <a href={project.repository} className="text-gray-400 hover:text-white transition-colors">
-                <Github className="h-5 w-5" />
-              </a>}
+            
+             <div className="flex gap-4">
               {project.preview && <a href={project.preview} className="text-gray-400 hover:text-white transition-colors">
                 <Link className="h-5 w-5" />
               </a>}
-            </div>}
+            </div>
           </motion.div>
         ))}
       </div>

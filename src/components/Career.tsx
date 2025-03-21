@@ -17,6 +17,17 @@ interface CareerItem {
 
 const careerData: CareerItem[] = [
   {
+    company: "FreeLancer",
+    start: "2022",
+    role: {
+      en: "FreeLancer Developer",
+      pt: "Desenvolvedor FreeLancer"
+    },
+    description: {
+      en: "I work as a freelancer developer, where I develop websites and web applications for clients.",
+      pt: "Trabalho como desenvolvedor freelancer, onde desenvolvo sites e aplicações web para clientes."}
+  },
+  {
     company: "Regulatório Mais",
     start: "2023",
     role: {
