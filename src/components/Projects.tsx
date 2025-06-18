@@ -18,7 +18,7 @@ const projects: Project[] = [
             pt: "Este é um projeto de uma landing page para uma empresa de lareiras, churrasqueiras e grelhas, voltada para a solução de fechamento de lareira, apresentando os produtos, comparações, vídeos, fotos.",
             en: "This is a landing page project for a company specializing in fireplaces, grills, and grates, focused on the solution for fireplace closure, showcasing products, comparisons, videos, and photos.",
         },
-        preview: "https://fechamentodelareira.doorgrillprojetos.com.br/",
+        preview: "https://fechamentodelareira.doorgrillprojetos.com/",
     },
     {
         name: "Hapri Studio",
