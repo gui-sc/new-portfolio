@@ -13,6 +13,14 @@ type Project = {
 
 const projects: Project[] = [
     {
+        name: "Vip Agendamentos",
+        description: {
+            pt: "Este é um projeto de um sistema de agendamentos online para salões de beleza e barbearias, com gerenciamento de usuários, profissionais, serviços e comandas, e tecnologia PWA (Aplicativo WEB) para acesso facilitado em dispositivos móveis.",
+            en: "This is a project of an online scheduling system for beauty salons and barbershops, with user, professional, service, and bill management, and PWA (Progressive Web App) technology for easy access on mobile devices.",
+        },
+        preview: "https://vipagendamentos.com.br/",
+    },
+    {
         name: "Door Grill",
         description: {
             pt: "Este é um projeto de uma landing page para uma empresa de lareiras, churrasqueiras e grelhas, voltada para a solução de fechamento de lareira, apresentando os produtos, comparações, vídeos, fotos.",
